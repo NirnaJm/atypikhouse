@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MockAccommodationsService} from '../../shared/service/mock/mock-accommodations.service';
-import { ACCOMMODATIONS } from '../../shared/service/mock/mock-accommodations.service';
+import { AccommodationsService } from '../../shared/service/accommodations.service';
+import { Accommodation } from '../accommodation';
 
 @Component({
   selector: 'app-accommodations',
@@ -8,12 +8,21 @@ import { ACCOMMODATIONS } from '../../shared/service/mock/mock-accommodations.se
   styleUrls: ['./accommodations.component.css']
 })
 export class AccommodationsComponent implements OnInit {
-  accommodations = ACCOMMODATIONS;
-
-
-  constructor() { }
+  accommodations: Accommodation[];
+  
+  selectedAccommodation:Accommodation;
+  constructor(private accommodationsService:AccommodationsService) { }
 
   ngOnInit() {
+    this.getAccommodations();
+  }
+
+  getAccommodations():void{
+    this.accommodationsService.getAccommodations().subscribe(accommodations=>this.accommodations=accommodations);
+  }
+
+  selectAccommodation(accommodation:Accommodation){
+    this.selectedAccommodation = accommodation;
   }
 
 }

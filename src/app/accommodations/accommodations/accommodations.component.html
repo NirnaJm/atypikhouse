@@ -18,8 +18,7 @@
                         <h6><a>{{accommodation.title}}</a></h6>
                         <a>{{accommodation.price}}€/par nuit</a>
                         <p class="text-muted card-text">{{accommodation.description_accommodation}}</p>
-                        <!-- <button type="button" class="btn btn-atypik btn-md" routerLink = "/location/{{accommodation.id_accommodation}}" >Découvrir</button> -->
-                        <button type="button" class="btn btn-atypik btn-md" routerLink="location">Découvrir</button>
+                        <button type="button" class="btn btn-atypik btn-md" (click)=selectAccommodation(accommodation) routerLink = "../location/{{accommodation.id_accommodation}}" >Découvrir</button>
                     </div>
                 </div>
             </div>

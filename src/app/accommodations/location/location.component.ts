@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import {AccommodationsService} from '../../shared/service/accommodations.service';
+// import { ACCOMMODATIONS } from '../../shared/service/mock/mock-accommodations.service';
+import {Accommodation } from "../accommodation";
 
 @Component({
   selector: 'app-location',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
 
-  constructor() { }
+  accommodation: Accommodation;
+
+  constructor(
+    private accommodationsService: AccommodationsService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    this.getAccommodation();
   }
+
+  getAccommodation(): void {
+   const id = +this.route.snapshot.paramMap.get('id_accommodation');
+   this.accommodationsService.getAccommodation(id)
+     .subscribe(accommodation => this.accommodation = accommodation);
+}
 
 }

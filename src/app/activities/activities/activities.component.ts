@@ -16,4 +16,6 @@ export class ActivitiesComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
 }

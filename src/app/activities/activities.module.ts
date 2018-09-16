@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { RouterModule } from '@angular/router';
 
+import { ActivitiesWrapperComponent } from './activities-wrapper/activities-wrapper.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { ActivityDetailsComponent } from './activity-details/activity-details.component';
-// import { ActivitiesRoutingModule } from './activities-routing/activities-routing.module';
+import { ActivitiesRoutingModule } from './activities-routing/activities-routing.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    // ActivitiesRoutingModule,
-    AppRoutingModule
+    RouterModule,
+    ActivitiesRoutingModule,
   ],
-  declarations: [ActivitiesComponent, ActivityDetailsComponent]
+  exports: [
+    RouterModule
+  ],
+  declarations: [ActivitiesComponent, ActivityDetailsComponent, ActivitiesWrapperComponent]
 })
 export class ActivitiesModule { }

@@ -1,0 +1,23 @@
+#wrapper{padding:90px 15px;}
+.navbar-expand-lg .navbar-nav.side-nav{flex-direction: column;}
+.card{margin-bottom: 15px; border-radius:0; box-shadow: 0 3px 5px rgba(0,0,0,.1); }
+.header-top{box-shadow: 0 3px 5px rgba(0,0,0,.1)}
+@media(min-width:992px) {
+#wrapper{margin-left: 200px;padding: 90px 15px 15px;}
+}
+.center-menu-user{
+  text-align: center;
+}
+.margin-card{
+  margin: 0;
+}
+.bdr-radius-img{
+  border-radius: 50% !important;
+  margin: 8px;
+}
+.flt-btn{
+  float: right;
+}
+.flt-name{
+  text-align: center;
+}

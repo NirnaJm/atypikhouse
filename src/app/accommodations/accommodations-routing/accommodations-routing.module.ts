@@ -6,11 +6,15 @@ import { LocationComponent } from '../location/location.component';
 import { AccommodationsWrapperComponent } from '../accommodations-wrapper/accommodations-wrapper.component';
 
 const accommodationsRoutes: Routes = [
-  {path: '',
+  {path: 'accommodations',
   component: AccommodationsWrapperComponent,
   children:[
     {path: '', component: AccommodationsComponent},
-    {path: 'location', component: LocationComponent}
+    // TUTO ID OPEN
+    {path: 'accommodations/:id', component: LocationComponent},
+    {path: 'location', component: LocationComponent},
+    {path: 'location/:id_accommodation', component: LocationComponent}
+    //fin
   ]}
 
 

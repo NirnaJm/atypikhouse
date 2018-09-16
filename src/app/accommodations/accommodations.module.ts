@@ -4,12 +4,17 @@ import { AccommodationsComponent } from './accommodations/accommodations.compone
 import { LocationComponent } from './location/location.component';
 import { AccommodationsWrapperComponent } from './accommodations-wrapper/accommodations-wrapper.component';
 import { AccommodationsRoutingModule } from './accommodations-routing/accommodations-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    AccommodationsRoutingModule
+    AccommodationsRoutingModule,
+    RouterModule
+  ],
+  exports: [
+    RouterModule
   ],
   declarations: [AccommodationsComponent, LocationComponent, AccommodationsWrapperComponent]
 })
