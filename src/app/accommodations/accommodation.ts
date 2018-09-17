@@ -8,9 +8,13 @@ export class Accommodation {
   available: string;
   created_at: string;
   updated_at: string;
+  city: string;
   photos_accommodation: string;
+  photos_accommodation1: string;
+  photos_accommodation2: string;
+  photos_accommodation3: string;
   commentaire_accommodation: string;
   id_user: number;
-  id_type: number;
+  name_type: string;
   id_address: number;
 }

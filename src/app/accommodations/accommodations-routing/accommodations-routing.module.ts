@@ -10,11 +10,9 @@ const accommodationsRoutes: Routes = [
   component: AccommodationsWrapperComponent,
   children:[
     {path: '', component: AccommodationsComponent},
-    // TUTO ID OPEN
     {path: 'accommodations/:id', component: LocationComponent},
     {path: 'location', component: LocationComponent},
     {path: 'location/:id_accommodation', component: LocationComponent}
-    //fin
   ]}
 
 

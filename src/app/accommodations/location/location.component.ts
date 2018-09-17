@@ -26,6 +26,6 @@ export class LocationComponent implements OnInit {
    const id = +this.route.snapshot.paramMap.get('id_accommodation');
    this.accommodationsService.getAccommodation(id)
      .subscribe(accommodation => this.accommodation = accommodation);
-}
+ }
 
 }

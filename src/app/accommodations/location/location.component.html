@@ -1,4 +1,4 @@
-<div id="hero-07" style="background: url('https://a0.muscache.com/im/pictures/10026423/540b7517_original.jpg?aki_policy=x_large') center center; background-size: cover;">
+<div id="hero-07" [ngStyle]="{'background-image':'url('+accommodation.photos_accommodation+')'}" style="background: center center; background-size: cover;">
     <div class="container d-flex flex-column" style="min-height: 105vh;">
     </div>
 </div>
@@ -7,16 +7,16 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-md-8 col-lg-8">
-            <h3>Type delogement</h3>
+            <h6>Type de logement : {{accommodation.name_type}}</h6>
             <h1>{{accommodation.title}}</h1>
-            <p>Localisation</p>
+            <p>Localisation : {{accommodation.city}}</p>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
                     <div class="col-md-4 col-sm-12 padding-gallery">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal" style="background: url(myimage.png)">
-                            <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/10026520/717f5adc_original.jpg?aki_policy=xx_large" alt="Card Image" >
+                            <img class="imgCarrousel img-responsive" src="{{accommodation.photos_accommodation1}}" alt="Card Image" >
                         </button>
 
                         <!-- Modal -->
@@ -30,7 +30,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body ">
-                                        <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/10026520/717f5adc_original.jpg?aki_policy=xx_large" alt="Card Image" >
+                                        <img class="size-img-modal img-responsive" src="{{accommodation.photos_accommodation1}}" alt="Card Image" >
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                     <div class="col-md-4 col-sm-12 padding-gallery">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal2" style="background: url(myimage.png)">
-                              <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/10026455/6783fb9c_original.jpg?aki_policy=x_large" alt="Card Image" >
+                              <img class="imgCarrousel img-responsive" src="{{accommodation.photos_accommodation2}}" alt="Card Image" >
                         </button>
 
                         <!-- Modal -->
@@ -54,7 +54,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body ">
-                                        <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/10026455/6783fb9c_original.jpg?aki_policy=x_large" alt="Card Image" >
+                                        <img class="size-img-modal img-responsive" src="{{accommodation.photos_accommodation2}}" alt="Card Image" >
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                     <div class="col-md-4 col-sm-12 padding-gallery">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal3" style="background: url(myimage.png)">
-                              <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/10026495/830df46f_original.jpg?aki_policy=x_large" alt="Card Image" >
+                              <img class="imgCarrousel img-responsive" src="{{accommodation.photos_accommodation3}}" alt="Card Image" >
                         </button>
 
                         <!-- Modal -->
@@ -78,7 +78,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body ">
-                                        <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/10026495/830df46f_original.jpg?aki_policy=x_large" alt="Card Image" >
+                                        <img class="size-img-modal img-responsive" src="{{accommodation.photos_accommodation3}}" alt="Card Image" >
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="card-body">
                       <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <p>{{accommodation.description_accommodation}}</p>
                       </blockquote>
                     </div>
                   </div>
@@ -111,9 +111,11 @@
                       EQUIPEMENTS :
                     </div>
                     <div class="card-body">
-                      <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                      </blockquote>
+                      <!-- <blockquote class="blockquote mb-0"> -->
+                        <p><i class="fa fa-bed fnt-size-i"></i> Nombre de lit  : {{accommodation.number_bed}}</p>
+                        <p><i class="fa fa-home fnt-size-i"></i> Nombre de pièces : {{accommodation.number_pieces}}</p>
+                      <!-- </blockquote> -->
+                        <!-- <button routerLink = "../../users" type="button" class="btn btn-atypik btn-md">Consulter le profil de votre hôte</button> -->
                     </div>
                   </div>
                 </div>
@@ -125,7 +127,7 @@
               	    <div class="panel panel-default">
                           <div class="panel-heading">
                               <h4 class="panel-title comtitleFont">
-                                  COMMENTAIRES
+                                  Derniers commentaires :
                               </h4>
                           </div>
                           <div class="panel-body">
@@ -145,11 +147,11 @@
                                               </small>
                                           </h4>
                                           <p>
-                                              Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue...
+                                              {{accommodation.commentaire_accommodation}}
                                           </p>
                                       </div>
                                   </li>
-                                  <li class="media">
+                                  <!-- <li class="media">
                                       <div class="media-left">
                                           <img src="http://placehold.it/60x60" class="img-circle bdr-radius-img">
                                       </div>
@@ -167,8 +169,8 @@
                                               Curabitur vel malesuada tortor, sit amet ultricies mauris. Aenean consectetur ultricies luctus.
                                           </p>
                                       </div>
-                                  </li>
-                                  <li class="media">
+                                  </li> -->
+                                  <!-- <li class="media">
                                       <div class="media-left">
                                          <img src="http://placehold.it/60x60" class="img-circle bdr-radius-img">
                                       </div>
@@ -177,7 +179,7 @@
                                               Praesent Tinci
                                               <br>
                                               <small>
-                                                  <!-- <i class="fas fa-star"></i> -->
+
                                                   <a class="li-ic">
                                                     <i class="fa fa-star"> </i>
                                                   </a>
@@ -190,7 +192,7 @@
                                               Sed convallis dignissim magna et dignissim. Praesent tincidunt sapien eu gravida dignissim.
                                           </p>
                                       </div>
-                                  </li>
+                                  </li> -->
                               </ul>
                               <a href="#" class="btn btn-default btn-block">Plus de commentaires »</a>
                           </div>
@@ -262,9 +264,29 @@
                     </div>
                 </div>
             </div>
-            <!-- FIN Recherche disponibilités ------------------------------------------------------------->
             <!-- Profil du loueur ------------------------------------------------------------->
               <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                            <div class="card-header">
+                              Votre hôte :
+                            </div>
+                              <div class="card-body text-center">
+                                <div class="media-left">
+                                    <img src="http://placehold.it/100x100" class="img-circle bdr-radius-img">
+                                </div>
+                                    <p>Emilia</p>
+                                    <button type="button" class="btn btn-atypik btn-md" routerLink="../../users" >Consulter le profil de votre hôte</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- FIN Profil du loueur ------------------------------------------------------------->
+            <!-- FIN Recherche disponibilités ------------------------------------------------------------->
+            <!-- Profil du loueur ------------------------------------------------------------->
+              <!-- <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                   <div class="mainflip">
                       <div class="frontside">
                           <div class="card">
@@ -281,12 +303,12 @@
                           </div>
                       </div>
                   </div>
-              </div>
+              </div> -->
               <!-- FIN Profil du loueur ------------------------------------------------------------->
               <!-- Calendrier disponibilités ------------------------------------------------------------->
-            <div class="fakecalendar">
+            <!-- <div class="fakecalendar"> -->
                 <!-- <div class="row"> -->
-                    <div class="span12">
+                    <!-- <div class="span12">
             		        <table class="table-condensed table-bordered table-striped">
                             <thead>
                                 <tr>
@@ -356,12 +378,12 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div> -->
                 <!-- </div> -->
-            </div>
+            <!-- </div> -->
             <!-- FIN Calendrier disponibilités ------------------------------------------------------------->
-
-            <iframe width="100%" height="300" border-radius="15px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45158.783190031434!2d5.552253901750062!3d44.9756982087057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478a9addb966f8b9%3A0x408ab2ae4be7d70!2s38650+Ch%C3%A2teau-Bernard%2C+France!5e0!3m2!1sen!2sus!4v1537177694449" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- <iframe width="100%" height="300" border-radius="15px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe> -->
         </div>
 
         </div>

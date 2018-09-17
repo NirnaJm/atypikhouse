@@ -1,4 +1,4 @@
-<div id="hero-07" style="background: url('https://www.letelegramme.fr/ar/imgproxy.php/images/2016/07/12/une-promenade-en-caleche-tiree-par-deux-superbes-fjords-et_2990595.jpg?article=20160712-1011145090&aaaammjj=20160712') center center; background-size: cover;">
+<div id="hero-07" [ngStyle]="{'background-image':'url('+activity.photos_activity+')'}"  style="background: center center; background-size: cover;">
     <div class="container d-flex flex-column" style="min-height: 105vh;">
     </div>
 </div>
@@ -7,16 +7,16 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-md-8 col-lg-8">
-            <h3>Type d'expérience</h3>
-            <h1>Titre expérience</h1>
-            <p>Localisation</p>
+            <h6>Type d'expérience : {{activity.type_activity}}</h6>
+            <h1>{{activity.name_activty}}</h1>
+            <p>Localisation: {{activity.city}}</p>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
                     <div class="col-md-4 col-sm-12 padding-gallery">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal" style="background: url(myimage.png)">
-                            <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/10026520/717f5adc_original.jpg?aki_policy=xx_large" alt="Card Image" >
+                            <img class="imgCarrousel img-responsive" src="{{activity.photos_activity1}}" alt="Card Image" >
                         </button>
 
                         <!-- Modal -->
@@ -24,13 +24,13 @@
                             <div class="modal-dialog modal-width" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Mod1al title</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">{{activity.name_activty}}</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body ">
-                                        <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/10026520/717f5adc_original.jpg?aki_policy=xx_large" alt="Card Image" >
+                                        <img class="size-img-modal img-responsive" src="{{activity.photos_activity1}}" alt="Card Image" >
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                     <div class="col-md-4 col-sm-12 padding-gallery">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal2" style="background: url(myimage.png)">
-                              <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/10026455/6783fb9c_original.jpg?aki_policy=x_large" alt="Card Image" >
+                              <img class="imgCarrousel img-responsive" src="{{activity.photos_activity2}}" alt="Card Image" >
                         </button>
 
                         <!-- Modal -->
@@ -54,7 +54,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body ">
-                                        <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/10026455/6783fb9c_original.jpg?aki_policy=x_large" alt="Card Image" >
+                                        <img class="size-img-modal img-responsive" src="{{activity.photos_activity2}}" alt="Card Image" >
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                     <div class="col-md-4 col-sm-12 padding-gallery">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal3" style="background: url(myimage.png)">
-                              <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/10026495/830df46f_original.jpg?aki_policy=x_large" alt="Card Image" >
+                              <img class="imgCarrousel img-responsive" src="{{activity.photos_activity3}}" alt="Card Image" >
                         </button>
 
                         <!-- Modal -->
@@ -78,7 +78,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body ">
-                                        <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/10026495/830df46f_original.jpg?aki_policy=x_large" alt="Card Image" >
+                                        <img class="size-img-modal img-responsive" src="{{activity.photos_activity3}}" alt="Card Image" >
                                     </div>
                                 </div>
                             </div>
@@ -89,8 +89,8 @@
                 <!-- Fin carrousel -->
             </div>
             <!--fin de la row gallery-->
-
-            <div class="row">
+            <!--a propos de votre guide-->
+            <!-- <div class="row">
                 <div class="col-md-12 col-lg-12">
                   <div class="card bdrLogement">
                     <div class="card-header bckgrd">
@@ -103,7 +103,8 @@
                     </div>
                   </div>
                 </div>
-            </div>
+            </div> -->
+              <!--FIN a propos de votre guide-->
             <div class="row">
                 <div class="col-md-12 col-lg-12">
                   <div class="card bdrLogement">
@@ -111,8 +112,10 @@
                       AU PROGRAMME :
                     </div>
                     <div class="card-body">
+                      <p><i class="fa fa-hourglass-start fnt-size-i"></i> Durée  : {{activity.duration}}</p>
+                      <p><i class="fa fa-credit-card fnt-size-i"></i> Prix  : {{activity.price}}€</p>
                       <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <p>{{activity.description_activity}}</p>
                       </blockquote>
                     </div>
                   </div>
@@ -144,9 +147,7 @@
                                                 </a>
                                               </small>
                                           </h4>
-                                          <p>
-                                              Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue...
-                                          </p>
+                                          <p>{{activity.commentaire_activity}}</p>
                                       </div>
                                   </li>
                                   <li class="media">

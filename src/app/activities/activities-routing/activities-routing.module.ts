@@ -10,13 +10,10 @@ const activitiesRoutes: Routes = [
   { path: 'activities',
     component: ActivitiesWrapperComponent,
     children: [
-      { path: '',
-        component: ActivitiesComponent
-      },
-      {
-        path: 'activity-details',
-        component: ActivityDetailsComponent
-      }
+      { path: '', component: ActivitiesComponent},
+      { path: 'activities/:id_activity', component: ActivityDetailsComponent},
+      { path: 'activity-details', component: ActivityDetailsComponent},
+      { path: 'activity-details/:id_activity', component: ActivityDetailsComponent}
     ]
   },
   // {

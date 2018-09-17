@@ -6,6 +6,7 @@ import { HomeComponent } from '../home/home/home.component';
 import { AccommodationsWrapperComponent } from '../accommodations/accommodations-wrapper/accommodations-wrapper.component';
 import { UsersComponent } from '../users/users/users.component';
 import { LocationComponent } from '../accommodations/location/location.component';
+import { ActivityDetailsComponent } from '../activities/activity-details/activity-details.component';
 
 
 const appRoutes: Routes = [
@@ -13,7 +14,8 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'accommodations', component: AccommodationsWrapperComponent},
   {path: 'users', component: UsersComponent},
-  {path: 'location/:id_accommodation', component: LocationComponent}
+  {path: 'location/:id_accommodation', component: LocationComponent},
+  { path: 'activity-details/:id_activity', component: ActivityDetailsComponent}
   // {path: 'activities', component: ActivitiesComponent},
   // {path: 'activity-details', component: ActivityDetailsComponent}
 
