@@ -20,4 +20,6 @@
       <li class="nav-item" *ngIf="user">Bonjour {{user.first_name}} {{user.last_name}}
     </li> -->
   </ul>
+  <div *ngIf="user"> Bon {{user.first_name}} {{user.last_name}}</div>
+  <div *ngIf="!user"> h</div>
 </nav>

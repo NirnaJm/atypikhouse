@@ -1,0 +1,11 @@
+
+<!-- <div *ngIf="user">Bonjour {{user.first_name}} {{user.last_name}}</div> -->
+<div *ngIf="msgError">{{msgError}}</div>
+<div class="modal-body">
+  <form  (submit)="onSubmit($event)">
+    <input type="text" name="login" [(ngModel)]="user.email">
+    <input type="password" name="password" [(ngModel)]="user.password">
+    <input type="submit" name="send" value="Envoyer">
+  </form>
+
+</div>

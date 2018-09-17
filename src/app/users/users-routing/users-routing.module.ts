@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
 import { UsersComponent } from '../users/users.component';
+import { LoginComponent } from '../login/login.component';
 import { UserContentComponent } from '../user-content/user-content.component';
 import { UserReservationsComponent } from '../user-content/user-reservations/user-reservations.component';
 // const usersRoutes: Routes = [
@@ -16,6 +17,7 @@ const usersRoutes: Routes = [
 
               }]
   },
+  { path: 'login', component: LoginComponent}
   // {path: 'activity-details', component: ActivityDetailsComponent}
 
 ];
