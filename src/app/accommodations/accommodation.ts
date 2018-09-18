@@ -15,6 +15,8 @@ export class Accommodation {
   photos_accommodation3: string;
   commentaire_accommodation: string;
   id_user: number;
+  photo_user: string;
+  first_name: string;
   name_type: string;
   id_address: number;
 }

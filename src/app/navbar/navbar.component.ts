@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../shared/service/users.service';
 import { User } from '../users/user';
+
+
+import { StorageService } from '../shared/service/mock/storage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +19,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.usersService.user.subscribe(user => this.user = user);
+  }
+
+  deconnexionUser(){
+        // console.log('jjoj');
+    this.usersService.deconnexion();
   }
 
 }

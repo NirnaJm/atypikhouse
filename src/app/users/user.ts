@@ -1,6 +1,10 @@
 export class User {
   id_user: number;
   password: string;
+  photo_user: string;
+  age: number;
+  localisation: string;
+  langues: string;
   created_at: string;
   update_at: string;
   last_name: string;

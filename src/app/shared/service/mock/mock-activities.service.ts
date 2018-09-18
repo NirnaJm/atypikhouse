@@ -17,6 +17,9 @@ export const ACTIVITIES: Activity[] = [
     photos_activity2: 'http://finedininglovers-fr.img.crosscast-system.com/?img=http%3A%2F%2Ffinedininglovers-fr.cdn.crosscast-system.com%2FBlogPost%2FOriginal_415_une-table-avec-des-produtis-du-Perigord---CP-Chartreuse-du-Bignac.jpg-694.png&w=1200&h=660&lu=1469465734&ext=.jpg',
     photos_activity3: 'https://medias.otbor.vm.aiprod.com/original/OP031AQU033000HE/0-JG047-2.jpg',
     commentaire_activity: 'Ce fut un moment fort de notre voyage !! Je recommande vivement de réserver cette excursion. Guide formidable et dégustation exquise!',
+    id_user: 4,
+    photo_user:'https://a0.muscache.com/im/pictures/user/d0b7e9e6-e6d7-4ba1-b38d-e54130dda866.jpg?aki_policy=profile_x_medium',
+    first_name: 'Marc',
   },
   {
     id_activity: 2,
@@ -33,6 +36,9 @@ export const ACTIVITIES: Activity[] = [
     photos_activity2: 'https://www.rendezvouscheznous.com/uploads/activity/1830/58bfbd5c688e4-promenade-en-caleche-a-travers-le-tarn.jpeg',
     photos_activity3: 'http://anena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2017/07/02/node_29232/489143/public/2017/07/02/B9712493043Z.1_20170702150114_000%2BGS69BIU8C.2-0.jpg?itok=yqqTi3iB',
     commentaire_activity: 'Petite balade de 2h et plus avec deux guides exceptionnels, découverte de la région et de son histoire . Guides aux petits soins pour ses visiteurs. Mes enfants et moi avons adoré encore merci.',
+    id_user: 5,
+    photo_user:'https://a0.muscache.com/im/pictures/user/8456426a-0e7c-48e0-b247-b3de3f263703.jpg?aki_policy=profile_x_medium',
+    first_name: 'Richard ',
   },
   {
     id_activity: 3,
@@ -49,6 +55,9 @@ export const ACTIVITIES: Activity[] = [
     photos_activity2: 'http://www.pessac-badminton.com/wp-content/uploads/2017/08/20170803_105137.jpg',
     photos_activity3: 'http://content.chatoff.by/news/6023_20131107-18-04-11-beach-tennis.jpg',
     commentaire_activity: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tincidunt sapien. Duis tellus ante, scelerisque quis viverra non, finibus non lorem.',
+    id_user: 6,
+    photo_user:'https://a0.muscache.com/im/users/3901478/profile_pic/1376220488/original.jpg?aki_policy=profile_x_medium',
+    first_name: 'James & Solen',
   },
   {
     id_activity: 4,
@@ -65,6 +74,9 @@ export const ACTIVITIES: Activity[] = [
     photos_activity2: 'https://a0.muscache.com/im/pictures/34ff5bcf-451d-456f-bad5-73d111943c89.jpg?aki_policy=x_large',
     photos_activity3: 'https://www.chamonix.net/sites/default/files/nodeimages/fly%20chamonix%20%207.8.09%20014_0.JPG?itok=ROCb1B7P',
     commentaire_activity: 'L\'équipe d\'Air Sports Chamonix est professionnelle, compréhensive et possède une grande expérience. merveilleuse expérience et j\'ai hâte de voler à nouveau avec cette équipe!',
+    id_user: 3,
+    photo_user:'https://a0.muscache.com/im/users/8749538/profile_pic/1429533104/original.jpg?aki_policy=profile_x_medium',
+    first_name: 'Nathalie',
   },
   {
     id_activity: 5,
@@ -81,6 +93,9 @@ export const ACTIVITIES: Activity[] = [
     photos_activity2: 'https://www.lacanausurfinfo.com/admin/tiny_mce/plugins/imagemanager/files/ecole_surf_bodyboard_school/ecole-surf-lacanau-ocean-ride-school4.jpg',
     photos_activity3: 'https://www.guide-du-paysbasque.com/_bibli/annonces/3689/hd/surf-division-01.jpg',
     commentaire_activity: 'Moment agréable bonne découverte des premières sensations de surf Maxime est un guide très agréable et disponible pour ses élèves je recommande pour qui veux tester ses premières vagues',
+    id_user: 6,
+    photo_user:'https://a0.muscache.com/im/users/3901478/profile_pic/1376220488/original.jpg?aki_policy=profile_x_medium',
+    first_name: 'James & Solen',
   },
   {
     id_activity: 6,
@@ -97,6 +112,9 @@ export const ACTIVITIES: Activity[] = [
     photos_activity2: 'http://www.dronestagr.am/wp-content/uploads/2015/06/DJI00596_HDR-1200x674.jpg',
     photos_activity3: 'https://lafrancevuedudrone.fr/wp-content/uploads/2016/10/small_chapel_on_top_of_a_hill_original.jpg',
     commentaire_activity: 'Promenade très intéressante et instructive. Guide très avenant, sympathique et connaît bien son sujet. Le lieu est magnifique et la vue exceptionnelle. Nous vous recommandons fortement cette expérience.',
+    id_user: 4,
+    photo_user:'https://a0.muscache.com/im/pictures/user/d0b7e9e6-e6d7-4ba1-b38d-e54130dda866.jpg?aki_policy=profile_x_medium',
+    first_name: 'Marc',
   },
 
 ];

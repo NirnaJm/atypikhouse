@@ -8,16 +8,17 @@
 
         <!-- Photo user  ------------------------------------------------------------->
         <div class="col-md-3 media-left">
-            <img src="https://a0.muscache.com/im/pictures/e8fd902e-bbe2-4efe-b741-2810551d6434.jpg?aki_policy=profile_x_medium" class="img-circle bdr-radius-img">
+            <img src="{{user.photo_user}}" class="img-circle bdr-radius-img">
 
         </div>
         <div class="col-md-6">
-              <h1 class="">Emilia</h1>
-              <p class="">Avignon, France · Membre depuis mai 2013</p>
+              <h1 class="">{{user.first_name}}</h1>
+              <p class="">{{user.localisation}} </p>
+              <p> Membre depuis le :  {{user.created_at}}</p>
         </div>
 
       <div class="col-md-3">
-        <button type="button" class="btn btn-atypik btn-md flt-btn">Modififer mon profil</button>
+        <button type="button" (click)=selectUserUpdate(user) routerLink="../../users/{{user.id_user}}/user-update" class="btn btn-atypik btn-md flt-btn">Modififer mon profil</button>
       <!-- FIN Photo user  ------------------------------------------------------------->
     </div>
     </div>

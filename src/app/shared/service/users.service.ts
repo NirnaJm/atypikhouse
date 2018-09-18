@@ -16,13 +16,14 @@ export class UsersService {
 
   constructor( private storageService: StorageService) { }
 
-  getAnts(): Observable<User[]> {
+  getUsers(): Observable<User[]> {
    return of(USERS);
  }
 
- getAnt(id: number): Observable<User> {
+ getUser(id: number): Observable<User> {
    return of(USERS.find(user => user.id_user === id));
  }
+
  login(email: string, password: string) : Observable<User>{
    const user : User = USERS.find((user: User) => {
      return user.email === email && user.password === password;
@@ -38,6 +39,13 @@ export class UsersService {
    }
 
  }
+
+ deconnexion(){
+   let user: User = this.storageService.delete('user');
+   this._user.next(null);
+    // return throwError('DECONNECTE');
+ }
+
  populate(){
    let user: User = this.storageService.getValue('user');
    this._user.next(user);

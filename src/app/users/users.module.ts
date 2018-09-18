@@ -7,6 +7,7 @@ import { UsersRoutingModule} from "./users-routing/users-routing.module";
 import { UserContentComponent } from './user-content/user-content.component';
 import { UserReservationsComponent } from './user-content/user-reservations/user-reservations.component';
 import { LoginComponent } from './login/login.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { LoginComponent } from './login/login.component';
     UsersRoutingModule,
     FormsModule
   ],
-  declarations: [UsersComponent, UserNavbarComponent, UserContentComponent, UserReservationsComponent, LoginComponent]
+  declarations: [UsersComponent, UserNavbarComponent, UserContentComponent, UserReservationsComponent, LoginComponent, UserUpdateComponent]
 })
 export class UsersModule { }

@@ -215,7 +215,7 @@
                             <div class="card-body text-center">
                                 <form>
                                         <div class="row">
-                                          <p>PRIX</p>
+                                          <p class="text-center">PRIX : {{activity.price}}€/personne</p>
                                         </div>
                                         <div class="row">
 
@@ -242,10 +242,10 @@
                             </div>
                               <div class="card-body text-center">
                                 <div class="media-left">
-                                    <img src="http://placehold.it/100x100" class="img-circle bdr-radius-img">
+                                    <img src="{{activity.photo_user}}" class="img-circle bdr-radius-img height-photo-user-activity">
                                 </div>
-                                    <p>Emilia</p>
-                                    <button type="button" class="btn btn-atypik btn-md" routerLink="../../users" >Voir le profil</button>
+                                    <p>{{activity.first_name}}</p>
+                                    <button type="button" class="btn btn-atypik btn-md" (click)=selectUserActivity(user) routerLink="../../users/{{activity.id_user}}" >Voir le profil</button>
                               </div>
                           </div>
                       </div>

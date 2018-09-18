@@ -13,4 +13,7 @@ export class Activity {
   photos_activity2: string;
   photos_activity3: string;
   commentaire_activity: string;
+  id_user: number;
+  photo_user: string;
+  first_name: string;
 }

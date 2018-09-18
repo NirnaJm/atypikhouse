@@ -14,7 +14,9 @@ export class StorageService {
   }
 
   public delete(key:string){
-    delete window.localStorage[key];
+     delete window.localStorage[key];
+    // window.localStorage[key] = JSON.stringify(value);
+    //return JSON.parse(window.localStorage[key]);
   }
 
   constructor() { }

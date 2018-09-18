@@ -28,4 +28,5 @@ export class LoginComponent implements OnInit {
     this.msgError = 'id ou mdp incorrect';
   });
   }
+
 }
