@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl : 'https://atypik-mroldan.c9users.io/lumen/public/'
 };

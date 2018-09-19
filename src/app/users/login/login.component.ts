@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.user.email, this.user.password).subscribe((user:User) => {
     this.router.navigate(['/']);
   }, err =>{
-    this.msgError = 'id ou mdp incorrect';
+    this.msgError = 'Mot de passe ou email incorrect.';
   });
   }
 

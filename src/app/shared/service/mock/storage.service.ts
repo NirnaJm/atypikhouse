@@ -10,7 +10,11 @@ export class StorageService {
   }
 
   public getValue(key:string){
-    return JSON.parse(window.localStorage[key]);
+    let val = window.localStorage[key];
+    if (val === undefined || val === null){
+      return null;
+    }
+    return JSON.parse(val);
   }
 
   public delete(key:string){

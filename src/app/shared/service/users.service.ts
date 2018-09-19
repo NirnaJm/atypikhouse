@@ -41,7 +41,7 @@ export class UsersService {
  }
 
  deconnexion(){
-   let user: User = this.storageService.delete('user');
+   this.storageService.delete('user');
    this._user.next(null);
     // return throwError('DECONNECTE');
  }

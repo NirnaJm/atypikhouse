@@ -15,7 +15,7 @@ export const USERS: User[] = [
     first_name: 'Emilia',
     renter: 1,
     partner: 0,
-    email: 'emilia-rodriguez@gmail.com',
+    email: 'password@gmail.com',
     description: 'Bonjour, mon but est que vous vous sentiez chez moi comme chez vous, si ce n\'est mieux! Passionnée de gastronomie, de musique et d\'art de vivre, je suis une mine de bons plans dans toute la Provence que je connais très bien. Avant et pendant votre séjour, je vous conseillerais au mieux pour faire de votre escale à Avignon une expérience inoubliable.',
     id_address: 1,
     id_picture: 1,

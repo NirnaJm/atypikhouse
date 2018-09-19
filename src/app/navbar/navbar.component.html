@@ -16,37 +16,55 @@
     <li class="nav-item">
       <a class="nav-link" routerLink = "#" >Devenir hôte</a>
     </li>
-  <!--
-      <li class="nav-item" *ngIf="user">Bonjour {{user.first_name}} {{user.last_name}}
-    </li> -->
+    <li class="nav-item">
+      <!-- Button trigger modal LOGIN SE CONNECTER -->
+      <button *ngIf="!user" type="button" class="btn btn-atypik btn-md img-shadow" data-toggle="modal" data-target="#loginModal" style="">
+          <a>  se connecter   <i class="fa fa-sign-in"></i></a>
+      </button>
+      <!-- FIN Button trigger modal LOGIN -->
+      <!-- Button trigger modal LOGIN SE CONNECTER -->
+      <button *ngIf="user" type="button" class="btn btn-atypik btn-md btn-padding" style="">
+          <a  (click)=deconnexionUser() routerLink="/"> <img class="icon-deco" src="assets/img/icon-deconnexion.png"/></a>
+      </button>
+      <!-- FIN Button trigger modal LOGIN -->
+    </li>
+    <li class="nav-item" *ngIf="user">
+      <button *ngIf="user" type="button" class="btn btn-atypik btn-md btn-padding-compte" style="">
+          <a class="color-white" (click)=selectUserLocation(user) routerLink="../../users/{{user.id_user}}" > <i class="fa fa-user-circle"></i> {{user.first_name}}</a>
+      </button>
+      <!-- <a>Bonjour  {{user.last_name}}</a> -->
+    </li>
   </ul>
-  <div *ngIf="user"> Bon {{user.first_name}} {{user.last_name}}
-    <a class="nav-link" (click)=deconnexionUser() routerLink="/"> Se déconnecter</a>
-  </div>
-  <div *ngIf="!user"> Se connecter</div>
 </nav>
 
 <div class="col-md-4 col-sm-12 padding-gallery">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal" style="background: url(myimage.png)">
-      co
-    </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <!-- Modal LOGIN -->
+    <div class="modal fade padding-rght" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-width" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">titlemodal</h5>
+                    <!-- <img class="logofooter card-img-top" src="assets/img/LogoV1.png"/> -->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body ">
-                    <p>plop</p>
-                  
+                <div *ngIf="!user" class="modal-body text-center">
+                    <img class="card-img-top with-modalLogo" src="assets/img/LogoV1.png"/>
+                    <p>Se connecter :</p>
+                    <app-login ></app-login>
+                    <hr class="">
+                    <p>Inscription :</p>
+                    <button type="button" class="btn btn-atypik btn-md" data-dismiss="modal">S'inscrire</button>
+                </div>
+                <div *ngIf="user" class="modal-body text-center">
+                    <img class=" card-img-top" src="assets/img/LogoV1.png"/>
+                    <h5 class="margin-top-modal">Bienvenue {{user.first_name}} !</h5>
+
                 </div>
             </div>
         </div>
     </div>
+    <!-- FIN Modal LOGIN -->
 </div>
