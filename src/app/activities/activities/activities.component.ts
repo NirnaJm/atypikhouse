@@ -11,7 +11,7 @@ export class ActivitiesComponent implements OnInit {
     // activities = ACTIVITIES;
     activities: Activity[];
 
-    selectedActivty:Activity;
+    selectedActivity:Activity;
     constructor(private activitiesService:ActivitiesService) { }
 
   ngOnInit() {
@@ -23,7 +23,7 @@ export class ActivitiesComponent implements OnInit {
   }
 
   selectActivity(activity:Activity){
-  this.selectedActivty = activity;
+  this.selectedActivity = activity;
   }
 
 

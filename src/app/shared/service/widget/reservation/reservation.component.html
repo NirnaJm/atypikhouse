@@ -1,14 +1,14 @@
 <form (onSubmit)="sendReservation($event)">
         <div class="form-row">
             <div class="col-lg-6">
-                <label for="staticEmail" class="col-form-label">Date de départ</label>
-                <!-- <my-date-picker name="" class="form-control" id="staticEmail1" placeholder="email@example.com"> -->
-                  <my-date-picker name="dateDepart" [options]="myDatePickerOptions"[(ngModel)]="model" required></my-date-picker>
+              <label for="dateDepart" class="col-form-label">Date de départ</label>
+              <!-- <my-date-picker name="" class="form-control" id="staticEmail1" placeholder="email@example.com"> -->
+              <my-date-picker name="dateDepart" [options]="myDatePickerOptions"[(ngModel)]="dateDepart" required></my-date-picker>
             </div>
             <div class="form-group col-lg-6">
-              <label for="staticEmail" class="col-form-label">Date de retour</label>
+              <label for="dateFin" class="col-form-label">Date de retour</label>
               <!-- <input type="text" class="form-control" id="staticEmail2" placeholder="email@example.com"> -->
-              <my-date-picker name="dateFin" [options]="myDatePickerOptions"[(ngModel)]="model" required></my-date-picker>
+              <my-date-picker name="dateFin" [options]="myDatePickerOptions"[(ngModel)]="dateFin" required></my-date-picker>
             </div>
         </div>
         <div class="form-row">
@@ -24,6 +24,7 @@
             </div>
               <div class="col-lg-12">
                 <br/><button type="submit" class="btn btn-atypik btn-md">Demande de réservation</button>
+                <!-- (click)=sendReservation()  -->
               </div>
         </div>
 

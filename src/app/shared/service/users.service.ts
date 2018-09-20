@@ -50,4 +50,9 @@ export class UsersService {
    let user: User = this.storageService.getValue('user');
    this._user.next(user);
  }
+
+ updateUser(){
+  
+
+ }
 }

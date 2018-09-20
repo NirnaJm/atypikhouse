@@ -22,9 +22,9 @@ export class ActivityDetailsComponent implements OnInit {
   }
 
   getActivity(): void {
- const id = +this.route.snapshot.paramMap.get('id_activity');
- this.activitiesService.getActivity(id)
-   .subscribe(activity => this.activity = activity);
-}
+   const id = +this.route.snapshot.paramMap.get('id_activity');
+   this.activitiesService.getActivity(id)
+     .subscribe(activity => this.activity = activity);
+  }
 
 }

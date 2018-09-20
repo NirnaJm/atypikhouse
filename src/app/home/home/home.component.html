@@ -56,354 +56,70 @@
               </div>
 </div>
       <section class="gallery-block cards-gallery">
-      <!-- BLOC#1 -->
-        <section class="container-fluid">
-            <div class="row">
-                <div class="col-md-4 col-lg-4">
-                    <div class="card border-0 transform-on-hover">
-                        <div class="card-header">
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet / consectetur adipiscing.</p>
-                        </div>
-                        <a class="lightbox" href="../img/image1.jpg">
 
-                           <img src="https://a0.muscache.com/im/pictures/10026423/540b7517_original.jpg?aki_policy=x_large" alt="Card Image" class="card-img-top">
-                         </a>
-
-                        <!-- </a> -->
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            <button type="button" class="btn btn-atypik btn-md" routerLink = "location">Découvrir</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 col-lg-8">
-                    <div class="card border-0 transform-on-hover">
-                        <div class="card-header">
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet / consectetur adipiscing elit / Nunc quam urna.</p>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-md-6 col-lg-6">
-                                <a class="lightbox" href="../img/image1.jpg">
-                                  <img src="https://a0.muscache.com/im/pictures/174f36a7-8186-4db4-aaa2-11b6f6b11832.jpg?aki_policy=xx_large" alt="Card Image" class="card-img content-imggr-card">
-                                </a>
-                                <!-- <div class="card-body">
-                                    <button type="button" class="btn btn-atypik btn-md">Découvrir</button>
-
-                                </div> -->
-                            </div>
-                            <div class="col-md-6 col-lg-6 ">
-                                <h3 >TITRE LOCATIONS</h3>
-                                <div>RATING</div>
-                                <h6>Description :</h6>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                <div class="row">
-                                    <div class="col-md-3 col-lg-3">
-                                        <span>Par nuit</span>
-                                        <h4>97€</h4>
-                                    </div>
-                                    <div class="col-md-9 col-lg-9">
-                                        <span>Annulation gratuite</span>
-                                        <h4>Cabane - 6 lits</h4>
-                                          <!-- <button type="button" class="btn btn-atypik btn-md">Découvrir</button> -->
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-      <!-- BLOC#1 -->
         <section class="container-fluid">
             <div class="heading">
-                  <h2>Cards Gallery</h2>
+                  <h2>Les derniers logements Atypik House :</h2>
             </div>
             <div class="row">
-                <div class="col-md-3 col-lg-3">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="../img/image1.jpg">
-                          <img src="https://a0.muscache.com/im/pictures/48806892/20c44ce1_original.jpg?aki_policy=xx_large" alt="Card Image" class="card-img-top">
+                <div  *ngFor="let accommodation of accommodations" class="col-md-3 col-lg-3" >
+                    <div  class="card border-0 transform-on-hover">
+                        <a class="lightbox" (click)=selectAccommodation(accommodation) routerLink = "/location/{{accommodation.id_accommodation}}">
+                          <img src="{{accommodation.photos_accommodation}}" alt="Card Image" class="card-img-top">
                         </a>
                         <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            <button type="button" class="btn btn-atypik btn-md">Découvrir</button>
+                            <h6><a href="#">{{accommodation.title}}</a></h6>
+                            <a>{{accommodation.price}}€/par nuit</a><br>
+                            <!-- <p class="text-muted card-text">{{accommodation.description_accommodation}}</p> -->
+                            <br><button type="button" class="btn btn-atypik btn-md" (click)=selectAccommodation(accommodation) routerLink = "/location/{{accommodation.id_accommodation}}" >Découvrir</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="card border-0 transform-on-hover">
-                        <a class="lightbox" href="../img/image2.jpg">
-                            <img src="https://a0.muscache.com/im/pictures/83626473/33f0a1eb_original.jpg?aki_policy=x_large" alt="Card Image" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                              <button type="button" class="btn btn-atypik btn-md">Découvrir</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="card border-0 transform-on-hover">
-                      <a class="lightbox" href="../img/image3.jpg">
-                        <img src="https://a0.muscache.com/im/pictures/65441227/bb1eb2dd_original.jpg?aki_policy=xx_large" alt="Card Image" class="card-img-top">
-                      </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            <button type="button" class="btn btn-atypik btn-md">Découvrir</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="card border-0 transform-on-hover">
-                      <a class="lightbox" href="../img/image3.jpg">
-                        <img src="https://a0.muscache.com/im/pictures/10356334/a831e142_original.jpg?aki_policy=xx_large" alt="Card Image" class="card-img-top">
-                      </a>
-                        <div class="card-body">
-                            <h6><a href="#">Lorem Ipsum</a></h6>
-                            <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
-                            <button type="button" class="btn btn-atypik btn-md">Découvrir</button>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
+
+
         </section>
       <!-- BLOC#1 -->
       <!-- BLOC#2 -->
         <section class="container-fluid banner-sec">
-
+          <div class="heading">
+                <h2>Les dernières expériences Atypik House :</h2>
+          </div>
                 <div class="row">
 
-                    <div class="col-md-3">
+                    <div class="col-md-3" *ngFor="let activity of activities">
                       <!-- Img card modal 1  ---------------------------------------------->
-                        <div class="card bdr-no">
+                        <div  class="card bdr-no">
                           <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModalG1" style="background: url(myimage.png)">
-                                <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/5a8d0d2c-75db-465f-acc5-fcdcd74fa0f8.jpg?aki_policy=x_large" alt="Card Image" >
+                            <button  type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModalG1" style="background: url(myimage.png)">
+                                <img class="imgCarrousel img-responsive" src="{{activity.photos_activity}}" alt="Card Image" (click)=selectedActivity(activity) routerLink = "/activity-details/{{activity.id_activity}}">
                             </button>
                           <!-- Modal -->
                             <div class="modal fade" id="exampleModalG1" tabindex="-1" role="dialog" aria-labelledby="exampleModalG1" aria-hidden="true">
                                 <div class="modal-dialog modal-width" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalG1">Mod1al title</h5>
+                                            <h5 class="modal-title" id="exampleModalG1">{{activity.name_activty}}</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body ">
-                                            <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/5a8d0d2c-75db-465f-acc5-fcdcd74fa0f8.jpg?aki_policy=x_large" alt="Card Image" >
+                                            <img class="size-img-modal img-responsive" src="{{activity.photos_activity}}" alt="Card Image" >
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                      <!-- Img card modal 2  ---------------------------------------------->
-                        <div class="card bdr-no">
-                          <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModalG2" style="background: url(myimage.png)">
-                                <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/65450097/b8d9b49e_original.jpg?aki_policy=x_large" alt="Card Image" >
-                            </button>
 
-                          <!-- Modal -->
-                            <div class="modal fade" id="exampleModalG2" tabindex="-1" role="dialog" aria-labelledby="exampleModalG2" aria-hidden="true">
-                                <div class="modal-dialog modal-width" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalG1">Mod1algg tit555le</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body ">
-                                            <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/65450097/b8d9b49e_original.jpg?aki_policy=x_large" alt="Card Image" >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
-                    <div class="col-md-3">
-                      <!-- Img card modal 3  ---------------------------------------------->
-                        <div class="card bdr-no">
-                          <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModalG3" style="background: url(myimage.png)">
-                                <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/83625543/676e8822_original.jpg?aki_policy=x_large" alt="Card Image" >
-                            </button>
-                          <!-- Modal -->
-                            <div class="modal fade" id="exampleModalG3" tabindex="-1" role="dialog" aria-labelledby="exampleModalG3" aria-hidden="true">
-                                <div class="modal-dialog modal-width" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalG1">Mod1al title</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body ">
-                                            <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/83625543/676e8822_original.jpg?aki_policy=x_large" alt="Card Image" >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <!-- Img card modal 4  ---------------------------------------------->
-                        <div class="card bdr-no">
-                          <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModalG4" style="background: url(myimage.png)">
-                                <img class="imgCarrousel img-responsive" src="http://www.rosier.pro/site/images/normal/Ventes571e39c4d350d.jpg" alt="Card Image" >
-                            </button>
-                          <!-- Modal -->
-                            <div class="modal fade" id="exampleModalG4" tabindex="-1" role="dialog" aria-labelledby="exampleModalG4" aria-hidden="true">
-                                <div class="modal-dialog modal-width" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalG2">Mod1al title</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body ">
-                                            <img class="size-img-modal img-responsive" src="http://www.rosier.pro/site/images/normal/Ventes571e39c4d350d.jpg" alt="Card Image" >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  <!-- Grande image à droite  ------------------------------------------------------------>
-                    <div class="col-md-6 top-slider">
-                        <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModalBigRight" style="background: url(myimage.png)">
-                            <img class="imgGrddroite img-responsive" src="https://a0.muscache.com/im/pictures/6fd5b922-7530-4765-a394-f2282b9196f7.jpg?aki_policy=xx_large" alt="Card Image" >
-                        </button>
-                      <!-- Modal -->
-                        <div class="modal fade" id="exampleModalBigRight" tabindex="-1" role="dialog" aria-labelledby="exampleModalBigRight" aria-hidden="true">
-                            <div class="modal-dialog modal-width" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalBigRight">Mod1al tiooooootle</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body ">
-                                        <img class="size-img-modal img-responsive" src="https://a0.muscache.com/im/pictures/6fd5b922-7530-4765-a394-f2282b9196f7.jpg?aki_policy=xx_large" alt="Card Image" >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  <!-- FIN - Grande image à droite  --------------------------------------------------->
+
+
                 </div>
         </section>
         <!-- BLOC#2 -->
-        <!-- BLOC#3 -->
-        <section class="container-fluid">
-              <div class="row">
-                 <div class="col-md-3 col-sm-12 padding-gallery">
-                     <!-- Button trigger modal -->
-                     <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal" style="background: url(myimage.png)">
-                         <img class="imgCarrousel img-responsive" src="http://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/assets/img/image2.jpg" alt="Card Image" >
-                     </button>
 
-                     <!-- Modal -->
-                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                         <div class="modal-dialog modal-width" role="document">
-                             <div class="modal-content">
-                                 <div class="modal-header">
-                                     <h5 class="modal-title" id="exampleModalLabel">Mod1al title</h5>
-                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                         <span aria-hidden="true">&times;</span>
-                                     </button>
-                                 </div>
-                                 <div class="modal-body ">
-                                     <img class="size-img-modal img-responsive" src="http://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/assets/img/image2.jpg" alt="Card Image" >
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-md-3 col-sm-12 padding-gallery">
-                     <!-- Button trigger modal -->
-                     <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal2" style="background: url(myimage.png)">
-                           <img class="imgCarrousel img-responsive" src="http://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/assets/img/image5.jpg" alt="Card Image" >
-                     </button>
-
-                     <!-- Modal -->
-                     <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                         <div class="modal-dialog modal-width" role="document">
-                             <div class="modal-content">
-                                 <div class="modal-header">
-                                     <h5 class="modal-title" id="exampleModalLabel">Mod22222al title</h5>
-                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                         <span aria-hidden="true">&times;</span>
-                                     </button>
-                                 </div>
-                                 <div class="modal-body ">
-                                     <img class="size-img-modal img-responsive" src="http://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/assets/img/image5.jpg" alt="Card Image" >
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="col-md-3 col-sm-12 padding-gallery">
-                   <!-- Button trigger modal -->
-                     <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal3" style="background: url(myimage.png)">
-                         <img class="imgCarrousel img-responsive" src="http://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/assets/img/image6.jpg" alt="Card Image" >
-                     </button>
-
-                     <!-- Modal -->
-                     <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                         <div class="modal-dialog modal-width" role="document">
-                             <div class="modal-content">
-                                 <div class="modal-header">
-                                     <h5 class="modal-title" id="exampleModalLabel">Moda4546546l title</h5>
-                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                         <span aria-hidden="true">&times;</span>
-                                     </button>
-                                 </div>
-                                 <div class="modal-body ">
-                                     <img class="size-img-modal img-responsive" src="http://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/assets/img/image6.jpg" alt="Card Image" >
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-3 col-sm-12 padding-gallery">
-                   <!-- Button trigger modal -->
-                     <button type="button" class="btn btn-primary brd-modal-color img-shadow" data-toggle="modal" data-target="#exampleModal3" style="background: url(myimage.png)">
-                         <img class="imgCarrousel img-responsive" src="https://a0.muscache.com/im/pictures/9c4e26e9-6839-4de6-b10f-8c0172167127.jpg?aki_policy=xx_large" alt="Card Image" >
-                     </button>
-
-                   <!-- Modal -->
-                     <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                         <div class="modal-dialog modal-width" role="document">
-                             <div class="modal-content">
-                                 <div class="modal-header">
-                                     <h5 class="modal-title" id="exampleModalLabel">Moda4546546l title</h5>
-                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                         <span aria-hidden="true">&times;</span>
-                                     </button>
-                                 </div>
-                                 <div class="modal-body ">
-                                     <img class="size-img-modal img-responsive" src="http://demo.tutorialzine.com/2018/03/3-amazing-bootstrap-4-gallery-templates/assets/img/image6.jpg" alt="Card Image" >
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             <!-- Fin carrousel -->
-                </div>
-        </section>
-        <!-- BLOC#3 -->
     </section>

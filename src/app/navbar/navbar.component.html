@@ -29,8 +29,8 @@
       <!-- FIN Button trigger modal LOGIN -->
     </li>
     <li class="nav-item" *ngIf="user">
-      <button *ngIf="user" type="button" class="btn btn-atypik btn-md btn-padding-compte" style="">
-          <a class="color-white" (click)=selectUserLocation(user) routerLink="../../users/{{user.id_user}}" > <i class="fa fa-user-circle"></i> {{user.first_name}}</a>
+      <button  type="button" class="btn btn-atypik btn-md btn-padding-compte" style="">
+          <a class="color-white" (click)=selectUserS(user) routerLink="users/{{user.id_user}}" > <i class="fa fa-user-circle"></i> {{user.first_name}}</a>
       </button>
       <!-- <a>Bonjour  {{user.last_name}}</a> -->
     </li>
