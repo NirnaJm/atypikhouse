@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { RouterModule, Routes} from '@angular/router';
 import { UsersComponent } from '../users/users.component';
+import { RegistrationComponent } from '../registration/registration.component';
 import { LoginComponent } from '../login/login.component';
 import { UserContentComponent } from '../user-content/user-content.component';
 import { UserReservationsComponent } from '../user-content/user-reservations/user-reservations.component';
@@ -20,7 +21,9 @@ const usersRoutes: Routes = [
               }]
   },
   { path: 'login', component: LoginComponent},
+  { path: 'registration', component: RegistrationComponent},
   { path: 'users/:id_user', component: UsersComponent},
+  { path: 'users/:id_user/user-reservations', component: UserReservationsComponent},
   { path: 'users/:id_user/user-update', component: UserUpdateComponent},
   // {path: 'activity-details', component: ActivityDetailsComponent}
 

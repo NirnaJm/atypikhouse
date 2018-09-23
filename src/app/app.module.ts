@@ -7,13 +7,14 @@ import { AccommodationsModule } from './accommodations/accommodations.module';
 import { ActivitiesModule } from './activities/activities.module';
 import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MyDatePickerModule } from 'mydatepicker';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './users/login/login.component';
+import { RegistrationComponent } from './users/registration/registration.component';
 
 import { MockActivitiesService } from './shared/service/mock/mock-activities.service';
 import { MockAccommodationsService } from './shared/service/mock/mock-accommodations.service';
@@ -28,7 +29,8 @@ import { ReservationService } from './shared/service/reservations.service';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
 
   ],
   imports: [
@@ -40,7 +42,8 @@ import { ReservationService } from './shared/service/reservations.service';
     AppRoutingModule,
     FormsModule,
     MyDatePickerModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     MockActivitiesService,

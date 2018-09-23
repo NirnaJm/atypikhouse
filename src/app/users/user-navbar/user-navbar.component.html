@@ -13,7 +13,7 @@
     RESERVATIONS
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a (click)=selectUser(user) routerLink="../../users/{{user.id_user}}/user-reservations">vos réservations</a></li>
+    <li class="list-group-item"><a (click)=onSelect() routerLink="user-reservations">vos réservations</a></li>
     <li class="list-group-item"><a href="#">historique</a></li>
     <li class="list-group-item"><a href="#">notifications <span class="badge">3</span></a></li>
   </ul>

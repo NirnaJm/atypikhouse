@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../shared/service/users.service';
 import { User } from '../users/user';
 import { LoginComponent } from '../users/login/login.component';
+import { RegistrationComponent } from '../users/registration/registration.component';
 
 
 import { StorageService } from '../shared/service/mock/storage.service';

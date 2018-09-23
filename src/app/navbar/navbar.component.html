@@ -1,70 +1,104 @@
-<nav class="navbar navbar-light">
-  <a class="navbar-brand" routerLink = "#"><img class="logo-navbar" src="assets/img/reduit-1.jpg"/></a>
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link" routerLink = "home">Accueil</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink = "accommodations">Locations</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink = "activities">Activités</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Le projet Atypik House</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink = "#" >Devenir hôte</a>
-    </li>
-    <li class="nav-item">
-      <!-- Button trigger modal LOGIN SE CONNECTER -->
-      <button *ngIf="!user" type="button" class="btn btn-atypik btn-md img-shadow" data-toggle="modal" data-target="#loginModal" style="">
-          <a>  se connecter   <i class="fa fa-sign-in"></i></a>
+
+
+<nav class="navbar navbar-expand-xl ">
+      <a class="navbar-brand" routerLink = "#"><img class="logo-navbar" src="assets/img/reduit-1.jpg"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> --><i class="fa fa-bars color-ico-menu"></i>
       </button>
-      <!-- FIN Button trigger modal LOGIN -->
-      <!-- Button trigger modal LOGIN SE CONNECTER -->
-      <button *ngIf="user" type="button" class="btn btn-atypik btn-md btn-padding" style="">
-          <a  (click)=deconnexionUser() routerLink="/"> <img class="icon-deco" src="assets/img/icon-deconnexion.png"/></a>
-      </button>
-      <!-- FIN Button trigger modal LOGIN -->
-    </li>
-    <li class="nav-item" *ngIf="user">
-      <button  type="button" class="btn btn-atypik btn-md btn-padding-compte" style="">
-          <a class="color-white" (click)=selectUserS(user) routerLink="users/{{user.id_user}}" > <i class="fa fa-user-circle"></i> {{user.first_name}}</a>
-      </button>
-      <!-- <a>Bonjour  {{user.last_name}}</a> -->
-    </li>
-  </ul>
-</nav>
 
-<div class="col-md-4 col-sm-12 padding-gallery">
+      <div class="collapse navbar-collapse" id="navbarsExample06">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link color-ico-menu" routerLink = "home">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-ico-menu" routerLink = "accommodations">Locations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-ico-menu" routerLink = "activities">Activités</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-ico-menu" href="#">Le projet Atypik House</a>
+          </li>
+          <li class="nav-item">
+              <!-- <a class="nav-link" routerLink = "#" >S'incrire</a> -->
+              <!-- Button trigger modal LOGIN SE CONNECTER -->
+              <button *ngIf="!user" type="button" class="btn btn-atypik btn-md img-shadow mrg-btn" data-toggle="modal" data-target="#inscriptionModal" style="">
+                  <a>  S'incrire   <i class="fa fa-user-plus"></i></a>
+              </button>
+              <!-- FIN Button trigger modal LOGIN -->
+          </li>
+          <li class="nav-item">
+              <!-- Button trigger modal LOGIN SE CONNECTER -->
+              <button *ngIf="!user" type="button" class="btn btn-atypik btn-md img-shadow" data-toggle="modal" data-target="#loginModal" style="">
+                  <a>  Se connecter   <i class="fa fa-sign-in"></i></a>
+              </button>
+              <!-- FIN Button trigger modal LOGIN -->
+              <!-- Button trigger modal LOGIN SE CONNECTER -->
+              <button *ngIf="user" type="button" class="btn btn-atypik btn-md btn-padding" style="">
+                  <a  (click)=deconnexionUser() routerLink="/"> <img class="icon-deco" src="assets/img/icon-deconnexion.png"/></a>
+              </button>
+              <!-- FIN Button trigger modal LOGIN -->
+        </li>
+        <li class="nav-item" *ngIf="user">
+              <button  type="button" class="btn btn-atypik btn-md btn-padding-compte" style="">
+                  <a class="color-white" (click)=selectUserS(user) routerLink="users/{{user.id_user}}" > <i class="fa fa-user-circle"></i> {{user.first_name}}</a>
+              </button>
+              <!-- <a>Bonjour  {{user.last_name}}</a> -->
+        </li>
+    </ul>
+  </div>
+  </nav>
+
+  <div class="col-md-4 col-sm-12 padding-gallery">
 
 
-    <!-- Modal LOGIN -->
-    <div class="modal fade padding-rght" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-width" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <img class="logofooter card-img-top" src="assets/img/LogoV1.png"/> -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div *ngIf="!user" class="modal-body text-center">
-                    <img class="card-img-top with-modalLogo" src="assets/img/LogoV1.png"/>
-                    <p>Se connecter :</p>
-                    <app-login ></app-login>
-                    <hr class="">
-                    <p>Inscription :</p>
-                    <button type="button" class="btn btn-atypik btn-md" data-dismiss="modal">S'inscrire</button>
-                </div>
-                <div *ngIf="user" class="modal-body text-center">
-                    <img class=" card-img-top" src="assets/img/LogoV1.png"/>
-                    <h5 class="margin-top-modal">Bienvenue {{user.first_name}} !</h5>
+      <!-- Modal LOGIN -->
+      <div class="modal fade padding-rght" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-width" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <!-- <img class="logofooter card-img-top" src="assets/img/LogoV1.png"/> -->
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div *ngIf="!user" class="modal-body text-center">
+                      <img class="card-img-top with-modalLogo" src="assets/img/LogoV1.png"/>
+                      <p>Se connecter :</p>
+                      <app-login ></app-login>
+                  </div>
+                  <div *ngIf="user" class="modal-body text-center">
+                      <img class=" card-img-top" src="assets/img/LogoV1.png"/>
+                      <h5 class="margin-top-modal">Bienvenue {{user.first_name}} !</h5>
 
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FIN Modal LOGIN -->
-</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- FIN Modal LOGIN -->
+      <!-- Modal Inscription -->
+      <div class="modal fade padding-rght" id="inscriptionModal" tabindex="-1" role="dialog" aria-labelledby="inscriptionModal" aria-hidden="true">
+          <div class="modal-dialog modal-width" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <!-- <img class="logofooter card-img-top" src="assets/img/LogoV1.png"/> -->
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div *ngIf="!user" class="modal-body text-center">
+                      <img class="card-img-top with-modalLogo" src="assets/img/LogoV1.png"/>
+                      <p>Inscription :</p>
+                      <app-registration ></app-registration>
+                  </div>
+                  <div *ngIf="user" class="modal-body text-center">
+                      <img class=" card-img-top" src="assets/img/LogoV1.png"/>
+                      <h5 class="margin-top-modal">Bienvenue {{user.first_name}} !</h5>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- FIN Modal Inscription -->
+  </div>

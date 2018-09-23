@@ -1,4 +1,4 @@
-<div id="hero-07" style="background: linear-gradient(90deg, rgb(52, 202, 187) 10%, rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_960_720.jpg') center center; background-size: cover;">
+<div id="hero-07" style="background: linear-gradient(90deg, rgb(52, 202, 187) 10%, rgba(0, 0, 0, 0.6)), url('assets/img/imgAccommodations.jpg/') center center; background-size: cover;">
   <div class="container d-flex flex-column" style="min-height: 105vh;">
 
   </div>
@@ -11,7 +11,7 @@
         <div class="row">
             <div *ngFor="let accommodation of accommodations" class="col-md-6 col-lg-4">
                 <div class="card border-0 transform-on-hover">
-                  <a class="lightbox" href="assets/img/location-test.jpg">
+                  <a class="lightbox" (click)=selectAccommodation(accommodation) routerLink = "../location/{{accommodation.id_accommodation}}">
                     <img src="{{accommodation.photos_accommodation}}" alt="Card Image" class="card-img-top">
                   </a>
                     <div class="card-body">

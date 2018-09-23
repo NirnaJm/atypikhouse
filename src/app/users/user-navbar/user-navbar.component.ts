@@ -11,6 +11,7 @@ import { User } from '../user';
 export class UserNavbarComponent implements OnInit {
 
   user: User;
+  selectedUser: User;
 
   constructor(
     private usersService:UsersService,
@@ -25,6 +26,10 @@ export class UserNavbarComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id_user');
     this.usersService.getUser(id)
     .subscribe(user => this.user = user);
+  }
+
+  onSelect(user: User): void {
+  this.selectedUser = user;
   }
 
 }
