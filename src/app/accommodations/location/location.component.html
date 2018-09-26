@@ -111,9 +111,22 @@
                       EQUIPEMENTS :
                     </div>
                     <div class="card-body">
+                        <p *ngFor= "let attribut of accommodation.attribut">
+
+                          <i class="fa fa-bed"></i>{{ attribut.name_attributes }};
+                          <span *ngIf="attribut.type_attributes === 'bool' ">
+                              <span *ngIf="attribut.value === '1'">Oui</span>
+                              <span *ngIf="attribut.value !== '1'">Non</span>
+                          </span>
+
+                            <span *ngIf="attribut.type_attributes !=='bool'">
+                              {{ attribut.value }}
+                            </span>
+
+                      </p>
                       <!-- <blockquote class="blockquote mb-0"> -->
-                        <p><i class="fa fa-bed fnt-size-i"></i> Nombre de lit  : {{accommodation.number_bed}}</p>
-                        <p><i class="fa fa-home fnt-size-i"></i> Nombre de pièces : {{accommodation.number_pieces}}</p>
+                        <!-- <p><i class="fa fa-bed fnt-size-i"></i> Nombre de lit  : {{accommodation.number_bed}}</p>
+                        <p><i class="fa fa-home fnt-size-i"></i> Nombre de pièces : {{accommodation.number_pieces}}</p> -->
                       <!-- </blockquote> -->
                         <!-- <button routerLink = "../../users" type="button" class="btn btn-atypik btn-md">Consulter le profil de votre hôte</button> -->
                     </div>

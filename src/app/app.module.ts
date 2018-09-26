@@ -15,7 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegistrationComponent } from './users/registration/registration.component';
-import { ReservationComponent } from './shared/service/widget/reservation/reservation.component';
+// import { ReservationComponent } from './shared/service/widget/reservation/reservation.component';
 
 import { MockActivitiesService } from './shared/service/mock/mock-activities.service';
 import { MockAccommodationsService } from './shared/service/mock/mock-accommodations.service';
@@ -32,8 +32,7 @@ import { ReservationsService } from './shared/service/reservations.service';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    RegistrationComponent,
-    ReservationComponent
+    RegistrationComponent
 
   ],
   imports: [

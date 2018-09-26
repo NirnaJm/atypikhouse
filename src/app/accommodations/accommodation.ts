@@ -19,4 +19,5 @@ export class Accommodation {
   first_name: string;
   name_type: string;
   id_address: number;
+  attribut:any;
 }

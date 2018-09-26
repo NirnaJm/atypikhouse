@@ -31,12 +31,14 @@ export class ReservationsService {
     // }).catch(() => {
     //   console.log("impossible d'ajouter la resa");
     // })
-    let params = new HttpParams();
-    params.append('logement', reservation.idLogement.toString());
-    params.append('debut', dateDebut);
-    params.append('fin', dateFin);
-    params.append('user', reservation.idUser.toString());
 
-    return this.api.get('reservation/insert',params);
+
+    const body ={
+      logement : reservation.idLogement,
+      debut :  dateDebut,
+      fin : dateFin,
+      user : reservation.idUser
+    }
+    return this.api.put('reservation/insert',body);
   }
 }
