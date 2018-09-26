@@ -11,6 +11,8 @@ import { User } from '../user';
 export class UsersComponent implements OnInit {
 
   user: User;
+  show : string;
+  showt: boolean = true;
 
     selectedUser:User;
     constructor(
@@ -31,12 +33,24 @@ export class UsersComponent implements OnInit {
 //   getUsers():void{
 // this.usersService.getUsers().subscribe(users=>this.users=users);
 // }
-onSelect(user: User): void {
-this.selectedUser = user;
-}
+  onSelect(user: User): void {
+  this.selectedUser = user;
+  }
 
-selectUserUpdate(user:User){
-this.selectedUser = user;
-}
+  selectUserUpdate(user:User){
+  this.selectedUser = user;
+  }
+
+  showElement(element){
+    console.log('caca');
+    if(element==='reservations'){
+    this.show ='reservations';
+
+
+  }else{
+    this.show='';
+  }
+
+  }
 
 }

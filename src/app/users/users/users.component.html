@@ -1,7 +1,37 @@
 <div id="container-fluid">
   <div class="row margin-card">
   <div class="col-md-3 center-menu-user">
-    <app-user-navbar></app-user-navbar>
+    <!-- <app-user-navbar></app-user-navbar> -->
+    <div class="card" style="width: 18rem;">
+      <div class="card-header color-atypik">
+        A PROPOS
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bdr-a-propos"><a>Langue : {{user.langues}}</a></li>
+        <li class="list-group-item bdr-a-propos"><a>Localisation : {{user.localisation}}</a></li>
+        <li class="list-group-item bdr-a-propos"><a>Age : {{user.age}} ans</a></li>
+      </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-header color-atypik">
+        RESERVATIONS
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><button (click)=showElement(reservations) >vos réservations</button></li>
+        <li *ngIf="showt" class="list-group-item"><a href="#">historique</a></li>
+        <li class="list-group-item"><a href="#">notifications <span class="badge">3</span></a></li>
+      </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-header color-atypik">
+        LOCATIONS
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="#">hébergements</a></li>
+        <li class="list-group-item"><a href="#">planning</a></li>
+        <li class="list-group-item"><a href="#">notifications <span class="badge">3</span></a></li>
+      </ul>
+    </div>
   </div>
   <div class="col-md-9">
     <div class="row">
@@ -23,7 +53,6 @@
     </div>
     </div>
     <div class="row">
-
         <div class="col">
           <div class="card">
             <div class="card-body">
@@ -50,6 +79,7 @@
         </div>
       </div>
           <app-user-content ></app-user-content>
+
 
     </div>
   </div>

@@ -7,14 +7,34 @@ import { Reservation } from '../model/reservation';
 })
 export class ReservationService {
 
-  constructor(protected api:ApiService) { }
+  constructor(protected api: ApiService) { }
 
-  save(reservation:Reservation){
-    return this.api.put('reservations/insert',{
-      debut : reservation.dateDepart.getFullYear()+'-'+(reservation.dateDepart.getMonth()+1)+'-'+reservation.dateDepart.getDate(),
-      fin : reservation.dateFin.getFullYear()+'-'+(reservation.dateFin.getMonth()+1)+'-'+reservation.dateFin.getDate(),
-      user : reservation.idUser,
-      logement : reservation.idLogement
+  save(reservation: Reservation) {
+
+
+
+    console.log(reservation)
+
+    let dateDebut = reservation.dateDepart.date.day + "-" + reservation.dateDepart.date.month + "-" + reservation.dateDepart.date.year;
+    let dateFin = reservation.dateFin.date.day + "-" + reservation.dateFin.date.month + "-" + reservation.dateFin.date.year;
+    console.log(dateFin.toString());
+
+    let book = {
+      "logement": 5,
+      "debut": dateDebut.toString(),
+      "fin": dateFin.toString(),
+      "user": 1
+    }
+    this.api.booking(book).then(res => {
+      console.log(res)
+    }).catch(() => {
+      console.log("impossible d'ajouter la resa");
     })
+    // return this.api.put('reservation/insert',
+    //   "logement="+reservation.idLogement+
+    //   "&debut="+dateDepart.getFullYear()+'-'+(dateDepart.getMonth()+1)+'-'+ dateDepart.getDate()+
+    //   "&fin="+dateFin.getFullYear()+'-'+(dateFin.getMonth()+1)+'-'+ dateFin.getDate()+
+    //   "&user="+reservation.idUser
+    // )
   }
 }

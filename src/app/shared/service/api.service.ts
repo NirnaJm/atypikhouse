@@ -30,16 +30,28 @@ export class ApiService {
   }
 
 
-  put(path: string, body: Object = {}, params: HttpParams = new HttpParams()): Observable<any> {
+  put(path: string, body: Object = {}, params: HttpParams = new HttpParams()) {
     return this.http.put(
       this.getUrl(path),
       JSON.stringify(body),
       {
         params: params,
       }
-    );
+      //body
+    )
   }
-
+  booking(booking){
+    return new Promise((resolve, reject) => {
+      console.log(booking);
+      this.http.put('https://atypik-mroldan.c9users.io/lumen/public/reservation/insert', booking)
+      .subscribe(res => {
+        console.log(res);
+        resolve(res);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
   delete() {
 
   }

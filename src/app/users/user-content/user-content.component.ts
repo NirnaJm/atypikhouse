@@ -27,4 +27,5 @@ export class UserContentComponent implements OnInit {
     .subscribe(user => this.user = user);
   }
 
+
 }

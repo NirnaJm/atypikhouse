@@ -97,12 +97,6 @@ export class UsersService {
 
   }
 
-  updateUser(user: User){
-
-    // USERS.update(user);
-
-  }
-
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

@@ -29,16 +29,26 @@ export class ReservationComponent implements OnInit {
   }
 
   sendReservation(event:Event) {
+
     if (!this.user) {
       return;
+
     }
+    // console.log('Kapouét');
     event.preventDefault();
     let reservation = new Reservation();
-    reservation.dateFin = this.dateFin;
-    reservation.dateDepart = this.dateDepart;
-    reservation.idUser = this.user.id_user;
     reservation.idLogement = this.accommodation.id_accommodation;
+    reservation.dateDepart = this.dateDepart;
+    reservation.dateFin = this.dateFin;
+    reservation.idUser = this.user.id_user;
+
+    console.log(reservation)
     this.reservationsService.save(reservation).subscribe( res =>
     console.log(res)
-  );}
+
+
+  );
+}
+
+
 }
