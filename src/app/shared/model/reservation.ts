@@ -1,6 +1,6 @@
 export class Reservation {
-  dateDepart:Date;
-  dateFin:Date;
+  dateDepart:any;
+  dateFin:any;
   idUser: number;
   idLogement: number;
 }

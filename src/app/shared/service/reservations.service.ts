@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { Reservation } from '../model/reservation';
+import {HttpParams} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ReservationService {
+export class ReservationsService {
 
   constructor(protected api: ApiService) { }
 
@@ -25,16 +26,17 @@ export class ReservationService {
       "fin": dateFin.toString(),
       "user": 1
     }
-    this.api.booking(book).then(res => {
-      console.log(res)
-    }).catch(() => {
-      console.log("impossible d'ajouter la resa");
-    })
-    // return this.api.put('reservation/insert',
-    //   "logement="+reservation.idLogement+
-    //   "&debut="+dateDepart.getFullYear()+'-'+(dateDepart.getMonth()+1)+'-'+ dateDepart.getDate()+
-    //   "&fin="+dateFin.getFullYear()+'-'+(dateFin.getMonth()+1)+'-'+ dateFin.getDate()+
-    //   "&user="+reservation.idUser
-    // )
+    // this.api.booking(book).then(res => {
+    //   console.log(res)
+    // }).catch(() => {
+    //   console.log("impossible d'ajouter la resa");
+    // })
+    let params = new HttpParams();
+    params.append('logement', reservation.idLogement.toString());
+    params.append('debut', dateDebut);
+    params.append('fin', dateFin);
+    params.append('user', reservation.idUser.toString());
+
+    return this.api.get('reservation/insert',params);
   }
 }

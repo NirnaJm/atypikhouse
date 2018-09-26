@@ -5,7 +5,6 @@ import { LocationComponent } from './location/location.component';
 import { AccommodationsWrapperComponent } from './accommodations-wrapper/accommodations-wrapper.component';
 import { AccommodationsRoutingModule } from './accommodations-routing/accommodations-routing.module';
 import { RouterModule } from '@angular/router';
-import { ReservationComponent } from '../shared/service/widget/reservation/reservation.component';
 import { MyDatePickerModule } from 'mydatepicker';
 import { FormsModule } from '@angular/forms';
 // import { ReservationComponent} from '../';
@@ -24,6 +23,6 @@ import { FormsModule } from '@angular/forms';
     RouterModule
 
   ],
-  declarations: [AccommodationsComponent, LocationComponent, AccommodationsWrapperComponent, ReservationComponent]
+  declarations: [AccommodationsComponent, LocationComponent, AccommodationsWrapperComponent]
 })
 export class AccommodationsModule { }

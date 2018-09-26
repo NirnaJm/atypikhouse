@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {AccommodationsService} from '../../shared/service/accommodations.service';
 // import { ACCOMMODATIONS } from '../../shared/service/mock/mock-accommodations.service';
+// import { ReservationComponent } from '../../shared/service/widget/reservation/reservation.component';
 import {Accommodation } from "../accommodation";
 
 @Component({

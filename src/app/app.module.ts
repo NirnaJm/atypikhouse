@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegistrationComponent } from './users/registration/registration.component';
+import { ReservationComponent } from './shared/service/widget/reservation/reservation.component';
 
 import { MockActivitiesService } from './shared/service/mock/mock-activities.service';
 import { MockAccommodationsService } from './shared/service/mock/mock-accommodations.service';
@@ -22,7 +23,8 @@ import { MockUsersService } from './shared/service/mock/mock-users.service';
 import { UsersService } from './shared/service/users.service';
 import { AccommodationsService } from './shared/service/accommodations.service';
 import { StorageService } from './shared/service/mock/storage.service';
-import { ReservationService } from './shared/service/reservations.service';
+import { ReservationsService } from './shared/service/reservations.service';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ReservationService } from './shared/service/reservations.service';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ReservationComponent
 
   ],
   imports: [
@@ -52,7 +55,7 @@ import { ReservationService } from './shared/service/reservations.service';
     UsersService,
     AccommodationsService,
     StorageService,
-    ReservationService
+    ReservationsService
   ],
   bootstrap: [
     AppComponent

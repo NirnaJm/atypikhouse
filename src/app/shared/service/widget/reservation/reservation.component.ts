@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IMyDpOptions} from 'mydatepicker';
-import {ReservationService} from '../../../service/reservations.service';
+import {ReservationsService} from '../../../service/reservations.service';
 import {Reservation} from '../../../model/reservation';
 import {UsersService} from '../../../service/users.service';
 import {User} from '../../../../users/user';
@@ -21,7 +21,7 @@ export class ReservationComponent implements OnInit {
 
   user:User;
 
-  constructor(protected reservationsService:ReservationService,
+  constructor(protected reservationsService:ReservationsService,
               protected usersService:UsersService) { }
 
   ngOnInit() {
