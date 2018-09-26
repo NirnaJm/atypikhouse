@@ -10,7 +10,7 @@ import { AccommodationsRoutingModule } from './accommodations-routing/accommodat
 import { RouterModule } from '@angular/router';
 import { MyDatePickerModule } from 'mydatepicker';
 import { FormsModule } from '@angular/forms';
-import { NewAccommodationComponent } from './new-accommodation/new-accommodation.component';
+// import { NewAccommodationComponent } from './new-accommodation/new-accommodation.component';
 // import { ReservationComponent} from '../';
 
 
